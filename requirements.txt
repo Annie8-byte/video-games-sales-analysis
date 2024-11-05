@@ -1,0 +1,5 @@
+awswrangler
+duckdb
+pandas
+matplotlib
+streamlit
