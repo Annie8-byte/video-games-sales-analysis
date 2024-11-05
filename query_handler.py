@@ -1,6 +1,9 @@
 import duckdb
 import pandas as pd
-from constants import QUERY_PATH_BASED_ON_CATEGORY
+# import S3 data using awswrangler
+import awswrangler as aw
+from constants import (DATA_FILE_S3_URI,
+                    QUERY_PATH_BASED_ON_CATEGORY)
 
 class QueryHandler:
     def __init__(self, query_category:str):
@@ -24,4 +27,6 @@ class QueryHandler:
         duckdb.sql(self.query_text).show()
     
     def execute_query_and_return_dataframe(self) -> pd.DataFrame:
+        # Reading the raw data from the S3 Data Lake on AWS
+        video_game_sales = aw.s3.read_csv(DATA_FILE_S3_URI)
         return duckdb.sql(self.query_text).df()

@@ -1,6 +1,3 @@
-# import S3 data using awswrangler
-import awswrangler as aw
-from constants import DATA_FILE_S3_URI
 from query_handler import QueryHandler
 
 # Streamlit Dashboard
@@ -13,8 +10,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 st.set_page_config(layout="wide")
 
-# Reading the raw data from the S3 Data Lake on AWS
-video_game_sales = aw.s3.read_csv(DATA_FILE_S3_URI)
+
 # Filter distinct years where the amount of the video games published is more than 0.045 of all the amount of the dataset
 outliers = QueryHandler(query_category="outliers").df_result
 # Show Total N/A,EU,JP,Other and Global sales by YEAR and Genre
