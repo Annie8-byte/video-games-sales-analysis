@@ -1,6 +1,3 @@
-### README.md:
-
-```markdown
 # Video Game Sales Analysis & Forecasting
 
 This project analyzes historical video game sales data, performs sales forecasting, and displays results on an interactive Streamlit dashboard. The project leverages AWS for data storage, DuckDB for SQL processing, and FB Prophet for time series forecasting.
@@ -30,7 +27,7 @@ This project analyzes historical video game sales data, performs sales forecasti
    - Perform data cleaning and transformation using SQL queries in DuckDB.
    - Aggregate sales data by year, platform, region, and genre.
 
-3. **Forecasting with FB Prophet:**
+3. **Forecasting with FB Prophet:** 
    - Prepare time series data for forecasting.
    - Train the FB Prophet model to predict future sales trends.
 
@@ -79,8 +76,3 @@ This project analyzes historical video game sales data, performs sales forecasti
 - Implement more advanced machine learning models.
 - Add more interactivity to the Streamlit dashboard.
 - Extend forecasting to include more granular time periods (e.g., monthly or weekly).
-```
-
----
-
-This approach ensures you have a well-defined structure for your project, combining multiple technologies in a coherent way. Let me know if you need further adjustments or details!
